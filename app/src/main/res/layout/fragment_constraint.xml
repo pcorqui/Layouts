@@ -27,14 +27,22 @@
 <!--    cada elemento que este directamente por debajo de un contrait layout debe tener contraits-->
 <!--    las minimas son toStarOf y toTopOf-->
     <ImageView
+        android:id="@+id/imgPhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_light"></TextView>
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/holo_red_light"
+        app:layout_constraintStart_toEndOf="@+id/imgPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgPhoto"></TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
